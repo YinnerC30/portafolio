@@ -1,9 +1,25 @@
-<header class="flex gap-5 justify-center py-5 my-4 flex-wrap">
-  <a class="font-mono hover:text-blue-500" href="#presentation">Presentación</a>
-  <a class="font-mono hover:text-blue-500" href="#experience">Experiencia</a>
-  <a class="font-mono hover:text-blue-500" href="#projects">Proyectos</a>
-  <a class="font-mono hover:text-blue-500" href="#studies">Estudios</a>
-  <a class="font-mono hover:text-blue-500" href="#certifications"
-    >Certificaciones</a
-  >
+---
+const links = [
+  { link: 'presentation', label: 'Presentación' },
+  { link: 'experience', label: 'Experiencia' },
+  { link: 'projects', label: 'Proyectos' },
+  { link: 'studies', label: 'Estudios' },
+  { link: 'certifications', label: 'Certificaciones' },
+];
+---
+
+<header
+  class="flex gap-5 justify-center py-3 my-4 flex-wrap border-r-0 rounded-xl sticky top-2 bg-slate-800 w-[600px]"
+>
+  {
+    links.map(({ label, link }) => (
+      <a
+        class="hover:text-blue-500 text-sm"
+        href={`#${link}`}
+        data-link={`#${link}`}
+      >
+        {label}
+      </a>
+    ))
+  }
 </header>
