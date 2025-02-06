@@ -1,4 +1,6 @@
 ---
+import Accordion from './Accordion';
+
 const {
   rolName = '',
   companyName = '',
@@ -21,20 +23,23 @@ const {
     <span class="font-bold">Descripción: </span>
     {descriptionJob}
   </p>
-  <h4 class="my-4 font-bold">Funciones:</h4>
-  <ul>
-    {
-      functionsJob.map((functionJob: string) => (
-        <li class="list-disc ml-10">{functionJob}</li>
-      ))
-    }
-  </ul>
-  <h4 class="my-4 font-bold">Logros:</h4>
-  <ul>
-    {
-      achievementsJob.map((achievementJob: string) => (
-        <li class="list-disc ml-10">{achievementJob}</li>
-      ))
-    }
-  </ul>
+
+  <Accordion client:load title="Mostrar más">
+    <h4 class="my-4 font-bold">Funciones:</h4>
+    <ul>
+      {
+        functionsJob.map((functionJob: string) => (
+          <li class="list-disc ml-10">{functionJob}</li>
+        ))
+      }
+    </ul>
+    <h4 class="my-4 font-bold">Logros:</h4>
+    <ul>
+      {
+        achievementsJob.map((achievementJob: string) => (
+          <li class="list-disc ml-10">{achievementJob}</li>
+        ))
+      }
+    </ul>
+  </Accordion>
 </li>
