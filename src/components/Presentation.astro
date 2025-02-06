@@ -1,51 +1,23 @@
 ---
-import { Image } from 'astro:assets';
-import myImage from '../assets/foto-perfil.jpg';
+import ButtonLink from './ButtonLink.astro';
 ---
 
 <div class="flex flex-col gap-5">
-  <!-- <Image
-    src={myImage}
-    alt="fotografía de Yinner Chilito"
-    height={100}
-    width={100}
-    class={'rounded-full'}
-  /> -->
   <h2 id="presentation" class="font-bold text-5xl pt-20">
     Hola, soy Yinner Chilito 👋🏽
   </h2>
   <p class="w-4/5">
-    Soy un <span class="font-bold text-amber-300">analista y desarrollador de sistemas de información</span> especializado en
-    aplicaciones web <span class="font-bold text-amber-300">full stack</span> , con experiencia en el ciclo de vida de
-    desarrollo de software. Tales como la recolección y definición de
-    requerimientos, diseño, programación, realización de pruebas y despliegue
-    del aplicativo.
+    Soy un <span class="font-bold text-yellow-500"
+      >analista y desarrollador de sistemas de información</span
+    > especializado en aplicaciones web <span class="font-bold text-yellow-500"
+      >full stack</span
+    > , con experiencia en el ciclo de vida de desarrollo de software. Tales como
+    la recolección y definición de requerimientos, diseño, programación, realización
+    de pruebas y despliegue del aplicativo.
   </p>
-  
+
   <div class="flex gap-4">
-    <a
-      href="mailto:yinnermedina30@gmail.com"
-      class="flex gap-2 w-28 justify-center py-2 border rounded-xl bg-slate-800 hover:bg-slate-950"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="lucide lucide-mail "
-        ><rect width="20" height="16" x="2" y="4" rx="2"></rect><path
-          d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg
-      > Correo</a
-    >
-    <a
-      href="https://www.linkedin.com/in/yinner-stiven-chilito-medina/"
-      class="flex gap-2 w-32 justify-center py-2 border rounded-xl bg-slate-800 hover:bg-slate-950"
-    >
+    <ButtonLink name="Email" hrefLink="mailto:yinnermedina30@gmail.com">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -59,7 +31,31 @@ import myImage from '../assets/foto-perfil.jpg';
         class="lucide lucide-mail"
         ><rect width="20" height="16" x="2" y="4" rx="2"></rect><path
           d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg
-      > LinkedIn</a
+      >
+    </ButtonLink>
+    <ButtonLink
+      name="LinkedIn"
+      hrefLink="https://www.linkedin.com/in/yinner-stiven-chilito-medina/"
+      className="w-32"
     >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="lucide lucide-linkedin"
+        ><path
+          d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+        ></path><rect width="4" height="12" x="2" y="9"></rect><circle
+          cx="4"
+          cy="4"
+          r="2"></circle></svg
+      >
+    </ButtonLink>
   </div>
 </div>

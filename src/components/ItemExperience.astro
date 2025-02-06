@@ -1,0 +1,40 @@
+---
+const {
+  rolName = '',
+  companyName = '',
+  typeJob = '',
+  dateStarted = '',
+  dateFinished = '',
+  descriptionJob = '',
+  functionsJob = [],
+  achievementsJob = [],
+} = Astro.props;
+---
+
+<li class="list-disc">
+  <h3 class="font-bold text-xl text-yellow-500">
+    {rolName}
+  </h3>
+  <span class="font-bold block">{companyName}</span>
+  <span class="text-xs">{dateStarted} - {dateFinished}</span>
+  <p class="my-4">
+    <span class="font-bold">Descripción: </span>
+    {descriptionJob}
+  </p>
+  <h4 class="my-4 font-bold">Funciones:</h4>
+  <ul>
+    {
+      functionsJob.map((functionJob: string) => (
+        <li class="list-disc ml-10">{functionJob}</li>
+      ))
+    }
+  </ul>
+  <h4 class="my-4 font-bold">Logros:</h4>
+  <ul>
+    {
+      achievementsJob.map((achievementJob: string) => (
+        <li class="list-disc ml-10">{achievementJob}</li>
+      ))
+    }
+  </ul>
+</li>

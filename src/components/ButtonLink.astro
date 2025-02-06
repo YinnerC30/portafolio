@@ -1,0 +1,11 @@
+---
+const { name, hrefLink, className } = Astro.props;
+---
+
+<a
+  href={hrefLink}
+  class={`flex gap-2 w-28 justify-center items-center py-2 border rounded-xl bg-slate-800 hover:bg-slate-950 ${className}`}
+>
+  <slot />
+  {name}</a
+>
