@@ -1,11 +1,12 @@
 ---
 import ButtonLink from './ButtonLink.astro';
+import imageProfile from '/public/foto-perfil.webp'
 ---
 
 <section class="flex flex-col-reverse sm:flex-row gap-5 justify-center">
   <img
     class="object-fill w-52 self-center sm:self-start border border-slate-200 rounded-full mt-32"
-    src={'/public/foto-perfil.webp'}
+    src={imageProfile.src}
     alt="Imagen de perfil"
   />
   <div class="flex gap-4 flex-col">
