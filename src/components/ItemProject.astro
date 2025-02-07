@@ -25,7 +25,7 @@ const {
   <Carousel client:load images={images} />
 
   <h3 class="font-bold mt-4">Tecnologías utilizadas:</h3>
-  <div class="flex gap-2 flex-wrap">
+  <div class="flex gap-2 flex-wrap mt-2">
     {
       stackTechnologies.map((technology: ItemTechnology) => (
         <Badge className={technology.backgroundColor} name={technology.name} />

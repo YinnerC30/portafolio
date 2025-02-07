@@ -38,10 +38,10 @@ export const Carousel: React.FC<CarouselProps> = ({ images = [] }) => {
   const disableButtonFront = images.length === positionImage + 1;
 
   return (
-    <div className=" flex flex-col items-center justify-center gap-5 my-4">
+    <div className=" flex flex-col items-center justify-center gap-5 my-4 ">
       {!!selectedImage && (
-        <div className="fixed inset-0 flex items-center justify-center  bg-opacity-50 backdrop-blur-sm">
-          <div className="flex flex-col gap-5">
+        <div className="fixed inset-0 flex items-center justify-center  bg-opacity-50 backdrop-blur-sm ">
+          <div className="flex flex-col items-center justify-center gap-5 ">
             <button
               type="button"
               onClick={handleCloseDialog}
@@ -63,7 +63,7 @@ export const Carousel: React.FC<CarouselProps> = ({ images = [] }) => {
               </svg>
             </button>
             <div
-              className={`w-[80vw] w-max-[95vw] h-[600px] overflow-auto rounded-lg bg-no-repeat bg-contain`}
+              className={`w-[80vw] w-max-[95vw] h-[300px] sm:h-[90vh] overflow-auto rounded-lg bg-no-repeat bg-contain`}
               style={{
                 backgroundImage: `url(${selectedImage})`,
               }}
@@ -99,7 +99,7 @@ export const Carousel: React.FC<CarouselProps> = ({ images = [] }) => {
 
         <img
           onDoubleClick={() => handleSelectedImage(images[positionImage]?.url)}
-          className="w-[700px] h-[300px] rounded-xl object-scale-down cursor-pointer"
+          className="w-[100%] h-auto rounded-xl object-scale-down cursor-pointer border overflow-hidden"
           src={images[positionImage]?.url}
           alt=""
         />
