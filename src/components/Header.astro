@@ -8,18 +8,20 @@ const links = [
 ];
 ---
 
-<header
-  class="px-4 flex gap-5 justify-center py-3 my-4 flex-wrap border-r-0 rounded-xl sticky top-2 bg-slate-800"
->
-  {
-    links.map(({ label, link }) => (
-      <a
-        class="hover:text-blue-500 text-sm"
-        href={`#${link}`}
-        data-link={`#${link}`}
-      >
-        {label}
-      </a>
-    ))
-  }
+<header class="sticky top-2">
+  <nav
+    class="px-4 flex gap-5 justify-center py-3 my-4 flex-wrap border-r-0 rounded-xl bg-slate-800"
+  >
+    {
+      links.map(({ label, link }) => (
+        <a
+          class="hover:text-blue-500 text-sm"
+          href={`#${link}`}
+          data-link={`#${link}`}
+        >
+          {label}
+        </a>
+      ))
+    }
+  </nav>
 </header>
