@@ -1,10 +1,18 @@
 ---
-const { name, hrefLink, className } = Astro.props;
+interface Props {
+  name: string;
+  hrefLink: string;
+  className?: string;
+  targetOption?: string;
+}
+
+const { name, hrefLink, className = '', targetOption = '_blank' } = Astro.props as Props;
 ---
 
 <a
   href={hrefLink}
   class={`flex gap-2 w-28 justify-center items-center py-2 border rounded-xl bg-slate-800 hover:bg-slate-950 ${className}`}
+  target={targetOption}
 >
   <slot />
   {name}</a

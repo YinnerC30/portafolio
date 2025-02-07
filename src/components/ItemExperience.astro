@@ -17,8 +17,22 @@ const {
   <h3 class="font-bold text-xl text-yellow-500">
     {rolName}
   </h3>
-  <span class="font-bold block">{companyName}</span>
-  <span class="text-xs">{dateStarted} - {dateFinished}</span>
+  <!-- <p>
+    Empresa: <span class="font-bold block">{companyName}</span>
+  </p> -->
+  <p class="">
+    <span class="font-bold">Empresa: </span>
+    {companyName}
+  </p>
+  <p class="">
+    <span class="font-bold">Duración: </span>
+    <span class="">{dateStarted} - {dateFinished}</span>
+  </p>
+
+  <p class="my-4">
+    <span class="font-bold">Tipo de trabajo: </span>
+    {typeJob}
+  </p>
   <p class="my-4">
     <span class="font-bold">Descripción: </span>
     {descriptionJob}
