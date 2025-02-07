@@ -68,6 +68,6 @@ const experienceData: ExperienceItem[] = [
   </h2>
 
   <ul class="mt-5 ml-5 flex flex-col gap-4">
-    {experienceData.map((item) => <ItemExperience {...item} />)}
+    {experienceData.map((item) => <ItemExperience key={item.typeJob} {...item} />)}
   </ul>
 </div>

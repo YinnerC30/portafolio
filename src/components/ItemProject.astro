@@ -1,5 +1,6 @@
 ---
 import Accordion from './Accordion';
+import { AccordionList } from './AccordionList';
 import Badge from './Badge.astro';
 import ButtonLink from './ButtonLink.astro';
 import { Carousel } from './Carousel';
@@ -13,6 +14,7 @@ const {
   linkPreview = '',
   features = [],
   images = [],
+  videoDemoURL = '',
 } = Astro.props as ProjectInformation;
 ---
 
@@ -23,6 +25,25 @@ const {
 
   <h3 class="font-bold mt-4">Imágenes de ejemplo:</h3>
   <Carousel client:load images={images} />
+
+  {
+    !!videoDemoURL ? (
+      <div>
+        <h3 class="font-bold my-4">Video demostrativo:</h3>
+        <iframe
+          class="w-full"
+          height="400"
+          src={videoDemoURL}
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        />
+      </div>
+    ) : (
+      ''
+    )
+  }
 
   <h3 class="font-bold mt-4">Tecnologías utilizadas:</h3>
   <div class="flex gap-2 flex-wrap mt-2">
@@ -78,8 +99,6 @@ const {
 
   <Accordion client:load title="Mostrar funcionalidades">
     <h3 class="font-bold">Funcionalidades del proyecto:</h3>
-    <ul class="list-disc">
-      {features.map((feat) => <li class="ml-10">{feat}</li>)}
-    </ul>
+    <AccordionList client:load list={features} />
   </Accordion>
 </li>

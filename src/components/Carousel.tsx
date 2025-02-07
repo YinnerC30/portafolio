@@ -54,9 +54,9 @@ export const Carousel: React.FC<CarouselProps> = ({ images = [] }) => {
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               >
                 <path d="M18 6 6 18" />
                 <path d="m6 6 12 12" />
@@ -88,9 +88,9 @@ export const Carousel: React.FC<CarouselProps> = ({ images = [] }) => {
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           >
             <path d="m12 19-7-7 7-7" />
             <path d="M19 12H5" />
@@ -118,9 +118,9 @@ export const Carousel: React.FC<CarouselProps> = ({ images = [] }) => {
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           >
             <path d="M5 12h14" />
             <path d="m12 5 7 7-7 7" />
@@ -144,9 +144,9 @@ export const Carousel: React.FC<CarouselProps> = ({ images = [] }) => {
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           >
             <path d="m12 19-7-7 7-7" />
             <path d="M19 12H5" />
@@ -167,9 +167,9 @@ export const Carousel: React.FC<CarouselProps> = ({ images = [] }) => {
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           >
             <path d="M5 12h14" />
             <path d="m12 5 7 7-7 7" />
@@ -179,8 +179,9 @@ export const Carousel: React.FC<CarouselProps> = ({ images = [] }) => {
 
       {/* Bullets */}
       <div className="flex gap-2 flex-wrap justify-center">
-        {images.map((_, index) => (
+        {images.map((image, index) => (
           <button
+            key={image.url}
             type="button"
             onClick={() => jumpToImage(index)}
             className={`w-6 h-6 rounded-full  text-xs hover:bg-white text-slate-900 cursor-pointer ${
