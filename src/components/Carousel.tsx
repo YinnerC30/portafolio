@@ -38,7 +38,7 @@ export const Carousel: React.FC<CarouselProps> = ({ images = [] }) => {
   const disableButtonFront = images.length === positionImage + 1;
 
   return (
-    <div className=" flex flex-col items-center justify-center">
+    <div className=" flex flex-col items-center justify-center gap-5 my-4">
       {!!selectedImage && (
         <div className="fixed inset-0 flex items-center justify-center  bg-opacity-50 backdrop-blur-sm">
           <div className="flex flex-col gap-5">
@@ -63,7 +63,7 @@ export const Carousel: React.FC<CarouselProps> = ({ images = [] }) => {
               </svg>
             </button>
             <div
-              className={`w-[80vw] w-max-[90vw] h-[600px] overflow-auto rounded-lg bg-no-repeat bg-contain`}
+              className={`w-[80vw] w-max-[95vw] h-[600px] overflow-auto rounded-lg bg-no-repeat bg-contain`}
               style={{
                 backgroundImage: `url(${selectedImage})`,
               }}
@@ -74,7 +74,7 @@ export const Carousel: React.FC<CarouselProps> = ({ images = [] }) => {
 
       <div className="flex items-center gap-5">
         <button
-          className={`cursor-pointer px-4 py-2  text-slate-900 rounded-xl hover:bg-gray-400 ${
+          className={`hidden sm:block cursor-pointer px-4 py-2  text-slate-900 rounded-xl hover:bg-gray-400 ${
             disableButtonBack ? 'bg-gray-600 pointer-events-none' : 'bg-white'
           }`}
           type="button"
@@ -99,12 +99,12 @@ export const Carousel: React.FC<CarouselProps> = ({ images = [] }) => {
 
         <img
           onDoubleClick={() => handleSelectedImage(images[positionImage]?.url)}
-          className="w-[700px] h-[500px] rounded-xl object-scale-down cursor-pointer"
+          className="w-[700px] h-[300px] rounded-xl object-scale-down cursor-pointer"
           src={images[positionImage]?.url}
           alt=""
         />
         <button
-          className={`cursor-pointer px-4 py-2  text-slate-900 rounded-xl hover:bg-gray-400 ${
+          className={` hidden sm:block cursor-pointer px-4 py-2  text-slate-900 rounded-xl hover:bg-gray-400 ${
             disableButtonFront ? 'bg-gray-600 pointer-events-none' : 'bg-white'
           }`}
           type="button"
@@ -127,6 +127,56 @@ export const Carousel: React.FC<CarouselProps> = ({ images = [] }) => {
           </svg>
         </button>
       </div>
+
+      <div className="flex gap-10">
+        <button
+          className={`sm:hidden cursor-pointer px-4 py-2  text-slate-900 rounded-xl hover:bg-gray-400 ${
+            disableButtonBack ? 'bg-gray-600 pointer-events-none' : 'bg-white'
+          }`}
+          type="button"
+          onClick={handleBack}
+          disabled={disableButtonBack}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="m12 19-7-7 7-7" />
+            <path d="M19 12H5" />
+          </svg>
+        </button>
+        <button
+          className={`sm:hidden cursor-pointer px-4 py-2  text-slate-900 rounded-xl hover:bg-gray-400 ${
+            disableButtonFront ? 'bg-gray-600 pointer-events-none' : 'bg-white'
+          }`}
+          type="button"
+          onClick={handleFront}
+          disabled={disableButtonFront}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M5 12h14" />
+            <path d="m12 5 7 7-7 7" />
+          </svg>
+        </button>
+      </div>
+
       {/* Bullets */}
       <div className="flex gap-2 flex-wrap justify-center">
         {images.map((_, index) => (
