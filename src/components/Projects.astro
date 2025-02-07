@@ -1,4 +1,5 @@
 ---
+import type { ImageCarousel } from './Carousel';
 import ItemProject from './ItemProject.astro';
 
 export interface ItemTechnology {
@@ -13,6 +14,7 @@ export interface ProjectInformation {
   linkRepository: string;
   linkPreview: string;
   features: string[];
+  images: ImageCarousel[];
 }
 
 const projects: ProjectInformation[] = [
@@ -43,6 +45,69 @@ const projects: ProjectInformation[] = [
       'Orden de información por valores numéricos, fechas y alfabeto',
       'Barra de búsqueda de comandos de la aplicación',
       'Cambio de tema de la aplicación (modo oscuro y claro)',
+    ],
+    images: [
+      {
+        url: '/images-cropco/cropco-1.webp',
+        show: false,
+      },
+      {
+        url: '/images-cropco/cropco-1.1.webp',
+        show: false,
+      },
+      {
+        url: '/images-cropco/cropco-2.webp',
+        show: false,
+      },
+      {
+        url: '/images-cropco/cropco-2.1.webp',
+        show: false,
+      },
+      {
+        url: '/images-cropco/cropco-3.webp',
+        show: false,
+      },
+
+      {
+        url: '/images-cropco/cropco-4.webp',
+        show: false,
+      },
+      {
+        url: '/images-cropco/cropco-4.1.webp',
+        show: false,
+      },
+      {
+        url: '/images-cropco/cropco-5.webp',
+        show: false,
+      },
+      {
+        url: '/images-cropco/cropco-5.1.webp',
+        show: false,
+      },
+      {
+        url: '/images-cropco/cropco-6.webp',
+        show: false,
+      },
+      {
+        url: '/images-cropco/cropco-6.1.webp',
+        show: false,
+      },
+      {
+        url: '/images-cropco/cropco-7.webp',
+        show: false,
+      },
+      {
+        url: '/images-cropco/cropco-7.1.webp',
+        show: false,
+      },
+      {
+        url: '/images-cropco/cropco-8.webp',
+        show: false,
+      },
+      {
+        url: '/images-cropco/cropco-8.1.webp',
+        show: false,
+      },
     ],
   },
 ];

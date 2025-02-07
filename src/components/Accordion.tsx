@@ -19,7 +19,7 @@ export const Accordion: React.FC<Props> = ({ title, children }) => {
           type="button"
           className="cursor-pointer flex gap-2 items-center justify-between hover:underline hover:underline-offset-4 w-auto my-2"
         >
-          <span>{ isOpen ? 'Ocultar' : title}</span>
+          <span className='hover:text-blue-500'>{ isOpen ? 'Ocultar' : title}</span>
           {isOpen ? (
             <svg
               xmlns="http://www.w3.org/2000/svg"
