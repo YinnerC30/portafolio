@@ -101,7 +101,7 @@ export const Carousel: React.FC<CarouselProps> = ({ images = [] }) => {
           onDoubleClick={() => handleSelectedImage(images[positionImage]?.url)}
           className="w-[100%] h-auto rounded-xl object-scale-down cursor-pointer border overflow-hidden"
           src={images[positionImage]?.url}
-          alt=""
+          alt="imagen demostrativa del proyecto"
         />
         <button
           className={` hidden sm:block cursor-pointer px-4 py-2  text-slate-900 rounded-xl hover:bg-gray-400 ${
