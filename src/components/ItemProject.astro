@@ -97,8 +97,9 @@ const {
     {descriptionProject}
   </h3>
 
-  <Accordion client:load title="Mostrar funcionalidades">
-    <h3 class="font-bold">Funcionalidades del proyecto:</h3>
-    <AccordionList client:load list={features} />
-  </Accordion>
+  <Accordion
+    client:load
+    title="Mostrar más"
+    lists={[{ label: 'Funcionalidades del proyecto', items: features }]}
+  />
 </li>

@@ -1,11 +1,29 @@
 import React, { useState } from 'react';
 
-interface Props {
-  title: string;
-  children: React.ReactNode;
+export const AccordionList: React.FC<{ list: string[] }> = ({ list = [] }) => {
+  return (
+    <ul key={list.length}>
+      {list.map((item: string) => (
+        <li key={item} className="list-disc ml-10">
+          {item}
+        </li>
+      ))}
+    </ul>
+  );
+};
+
+interface ListItem {
+  label: string;
+  items: string[];
 }
 
-export const Accordion: React.FC<Props> = ({ title, children }) => {
+interface Props {
+  title: string;
+  lists: ListItem[];
+  children?: React.ReactNode,
+}
+
+export const Accordion: React.FC<Props> = ({ title, lists, children }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleAccordion = () => {
@@ -19,7 +37,9 @@ export const Accordion: React.FC<Props> = ({ title, children }) => {
           type="button"
           className="cursor-pointer flex gap-2 items-center justify-between hover:underline hover:underline-offset-4 w-auto my-2"
         >
-          <span className='hover:text-blue-500'>{ isOpen ? 'Ocultar' : title}</span>
+          <span className="hover:text-blue-500">
+            {isOpen ? 'Ocultar' : title}
+          </span>
           {isOpen ? (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -53,7 +73,17 @@ export const Accordion: React.FC<Props> = ({ title, children }) => {
           )}
         </button>
       </div>
-      {isOpen && <div className="accordion-content bg-slate-700 p-5 rounded-md">{children}</div>}
+      {isOpen && (
+        <div className="accordion-content bg-slate-700 p-5 rounded-md">
+          {children}
+          {lists.map((list) => (
+            <>
+              <h4 className="my-4 font-bold">{list.label}:</h4>
+              <AccordionList list={list.items} />
+            </>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

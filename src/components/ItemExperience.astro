@@ -39,11 +39,12 @@ const {
     {descriptionJob}
   </p>
 
-  <Accordion client:load title="Mostrar más">
-    <h4 class="my-4 font-bold">Funciones:</h4>
-    <AccordionList client:load list={functionsJob} />
-
-    <h4 class="my-4 font-bold">Logros:</h4>
-    <AccordionList client:load list={achievementsJob} />
-  </Accordion>
+  <Accordion
+    client:load
+    title="Mostrar más"
+    lists={[
+      { label: 'Funciones: ', items: functionsJob },
+      { label: 'Logros: ', items: achievementsJob },
+    ]}
+  />
 </li>
