@@ -4,14 +4,21 @@ interface Props {
   hrefLink: string;
   className?: string;
   targetOption?: string;
+  disabled?: boolean;
 }
 
-const { name, hrefLink, className = '', targetOption = '_blank' } = Astro.props as Props;
+const {
+  name,
+  hrefLink,
+  className = '',
+  targetOption = '_blank',
+  disabled = false,
+} = Astro.props as Props;
 ---
 
 <a
   href={hrefLink}
-  class={`flex gap-2 w-28 justify-center items-center py-2 border rounded-xl bg-slate-800 hover:bg-slate-950 transition-all duration-500 delay-500 hover:animate-bounce ${className}`}
+  class={`flex gap-2 w-28 justify-center items-center py-2 border rounded-xl bg-slate-800 hover:bg-slate-950 transition-all duration-500 delay-500 hover:animate-bounce ${className} ${disabled ? 'hidden': ''}`}
   target={targetOption}
 >
   <slot />

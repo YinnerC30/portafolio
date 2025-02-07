@@ -1,5 +1,77 @@
+---
+import type { ItemCertificationProps } from './ItemCertification.astro';
+import ItemCertification from './ItemCertification.astro';
+
+const certifications: ItemCertificationProps[] = [
+  {
+    title: 'Architecture in Cloud Computing',
+    expeditionDate: 'mayo de 2024',
+    institution: 'Universidad Tecnológica de Pereira',
+    url: 'https://www.acreditta.com/credential/c03828c0-1e3b-4a7e-9b75-b46d637117a1',
+  },
+  {
+    title: 'GitHub Fundations',
+    expeditionDate: 'agosto de 2024',
+    institution: 'GitHub',
+    url: 'https://www.credly.com/badges/850776f6-23e3-46c9-b8c1-6d9702c9717a/linked_in_profile',
+  },
+  {
+    title: 'Ciberseguridad',
+    expeditionDate: 'octubre de 2024',
+    institution: 'Google',
+    url: 'https://www.credly.com/badges/9bcd72ba-f5db-4944-b65e-fc8400707cc6/public_url',
+  },
+  {
+    title:
+      'Aplicación del marco de trabajo scrum para proyectos de desarrollo de software',
+    expeditionDate: 'octubre de 2024',
+    institution: 'SENA',
+    url: 'https://certificados.sena.edu.co/',
+  },
+  {
+    title: 'Manejo de pruebas de software',
+    expeditionDate: 'octubre de 2024',
+    institution: 'SENA',
+    url: 'https://certificados.sena.edu.co/',
+  },
+  {
+    title: 'Despliegue de aplicaciones en contenedores Docker',
+    expeditionDate: 'diciembre de 2023',
+    institution: 'SENA',
+    url: 'https://certificados.sena.edu.co/',
+  },
+  {
+    title: 'Data Science e Inteligencia artificial',
+    expeditionDate: 'noviembre de 2023',
+    institution: 'Universidad de Antioquia',
+    url: '',
+  },
+  {
+    title: 'Auditor Interno ISO/IEC 27001:2022',
+    expeditionDate: 'Octubre de 2023',
+    institution: 'ES-CIBER',
+    url: '',
+  },
+  {
+    title: 'DS4A / Colombia Fundamentos en Analítica de Datos',
+    expeditionDate: 'diciembre de 2022',
+    institution: 'Correlation One',
+    url: 'https://www.credential.net/72557cc9-950f-49fc-b388-d00fb02d3e1b?record_view=true',
+  },
+  {
+    title: 'Diplomado en Desarrollo de Aplicaciones Web Full Stack',
+    expeditionDate: 'diciembre de 2022',
+    institution: 'Universidad Tecnológica de Pereira',
+    url: '',
+  },
+];
+---
+
 <section>
-  <h2 id="certifications" class="flex gap-2 text-3xl items-center pt-32 font-bold">
+  <h2
+    id="studies"
+    class="flex gap-2 text-3xl items-center pt-32 font-bold underline underline-offset-8 decoration-blue-500 decoration-wavy"
+  >
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="24"
@@ -10,161 +82,14 @@
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class="lucide lucide-blocks"
+      class="lucide lucide-graduation-cap"
       ><rect width="7" height="7" x="14" y="3" rx="1"></rect><path
         d="M10 21V8a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1H3"
       ></path></svg
     > Formación extracurricular
   </h2>
 
-  <ul class="mt-5 ml-5 flex flex-col gap-4">
-    <li class="list-disc">
-      <h3 class="font-bold text-xl">
-        Arquitectura en computación en la Nube AWS
-      </h3>
-      <span class="font-bold block">Bootcamp</span>
-      <span class="font-bold block"
-        >Universidad Tecnológica de Pereira (UTP) – Programa TalentoTech</span
-      >
-      <span>15 octubre de 2023</span>
-      <p class="my-4">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam minima
-        perferendis doloribus magnam? Quod odit veritatis quis voluptate, nam
-        aspernatur vero? Debitis vitae veritatis nulla cum vero molestiae quam
-        hic?
-      </p>
-      <a
-        href="https://www.linkedin.com/in/yinner-stiven-chilito-medina/"
-        class="flex gap-2 w-40 justify-center py-2 border rounded-xl"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="lucide lucide-link"
-          ><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"
-          ></path><path
-            d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"
-          ></path></svg
-        > Credencial</a
-      >
-    </li>
-    <li class="list-disc">
-      <h3 class="font-bold text-xl">
-        Arquitectura en computación en la Nube AWS
-      </h3>
-      <span class="font-bold block">Bootcamp</span>
-      <span class="font-bold block"
-        >Universidad Tecnológica de Pereira (UTP) – Programa TalentoTech</span
-      >
-      <span>15 octubre de 2023</span>
-      <p class="my-4">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam minima
-        perferendis doloribus magnam? Quod odit veritatis quis voluptate, nam
-        aspernatur vero? Debitis vitae veritatis nulla cum vero molestiae quam
-        hic?
-      </p>
-      <a
-        href="https://www.linkedin.com/in/yinner-stiven-chilito-medina/"
-        class="flex gap-2 w-40 justify-center py-2 border rounded-xl"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="lucide lucide-link"
-          ><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"
-          ></path><path
-            d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"
-          ></path></svg
-        > Credencial</a
-      >
-    </li>
-    <li class="list-disc">
-      <h3 class="font-bold text-xl">
-        Arquitectura en computación en la Nube AWS
-      </h3>
-      <span class="font-bold block">Bootcamp</span>
-      <span class="font-bold block"
-        >Universidad Tecnológica de Pereira (UTP) – Programa TalentoTech</span
-      >
-      <span>15 octubre de 2023</span>
-      <p class="my-4">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam minima
-        perferendis doloribus magnam? Quod odit veritatis quis voluptate, nam
-        aspernatur vero? Debitis vitae veritatis nulla cum vero molestiae quam
-        hic?
-      </p>
-      <a
-        href="https://www.linkedin.com/in/yinner-stiven-chilito-medina/"
-        class="flex gap-2 w-40 justify-center py-2 border rounded-xl"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="lucide lucide-link"
-          ><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"
-          ></path><path
-            d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"
-          ></path></svg
-        > Credencial</a
-      >
-    </li>
-    <li class="list-disc">
-      <h3 class="font-bold text-xl">
-        Arquitectura en computación en la Nube AWS
-      </h3>
-      <span class="font-bold block">Bootcamp</span>
-      <span class="font-bold block"
-        >Universidad Tecnológica de Pereira (UTP) – Programa TalentoTech</span
-      >
-      <span>15 octubre de 2023</span>
-      <p class="my-4">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam minima
-        perferendis doloribus magnam? Quod odit veritatis quis voluptate, nam
-        aspernatur vero? Debitis vitae veritatis nulla cum vero molestiae quam
-        hic?
-      </p>
-      <a
-        href="https://www.linkedin.com/in/yinner-stiven-chilito-medina/"
-        class="flex gap-2 w-40 justify-center py-2 border rounded-xl"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="lucide lucide-link"
-          ><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"
-          ></path><path
-            d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"
-          ></path></svg
-        > Credencial</a
-      >
-    </li>
+  <ul class="mt-10 flex flex-wrap gap-4 w-full justify-evenly ">
+    {certifications.map((item) => <ItemCertification {...item} />)}
   </ul>
 </section>
