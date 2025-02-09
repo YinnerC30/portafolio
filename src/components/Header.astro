@@ -25,3 +25,45 @@ const links = [
     }
   </nav>
 </header>
+
+<script>
+  // Seleccionar todas las secciones y enlaces
+  const sections = document.querySelectorAll('section');
+  const navLinks = document.querySelectorAll('[data-link]');
+
+  console.log(sections);
+
+  // Opciones para el Intersection Observer
+  const observerOptions = {
+    root: null,
+    rootMargin: '-50% 0px', // Ajusta este valor según necesites
+    threshold: 0,
+  };
+
+  // Crear el observer
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        console.log(entry);
+        // Obtener el id de la sección actual
+        const id = `#${entry.target.id}`;
+
+        console.log(id)
+
+        // Actualizar clases de los enlaces
+        navLinks.forEach((link) => {
+          if (link.getAttribute('data-link') === id) {
+            link.classList.add('text-blue-500');
+          } else {
+            link.classList.remove('text-blue-500');
+          }
+        });
+      }
+    });
+  }, observerOptions);
+
+  // Observar todas las secciones
+  sections.forEach((section) => {
+    observer.observe(section);
+  });
+</script>
