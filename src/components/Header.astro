@@ -12,7 +12,7 @@ const links = [
   <nav
     class="px-4 flex gap-5 justify-center py-3 my-4 flex-wrap border-r-0 rounded-xl bg-slate-800"
   >
-  <a href="#" class="hidden text-blue-500"></a>
+    <a href="#" class="hidden text-blue-500"></a>
     {
       links.map(({ label, link }) => (
         <a
@@ -32,8 +32,6 @@ const links = [
   const sections = document.querySelectorAll('section');
   const navLinks = document.querySelectorAll('[data-link]');
 
-  console.log(sections);
-
   // Opciones para el Intersection Observer
   const observerOptions = {
     root: null,
@@ -45,11 +43,8 @@ const links = [
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        console.log(entry);
         // Obtener el id de la sección actual
         const id = `#${entry.target.id}`;
-
-        console.log(id)
 
         // Actualizar clases de los enlaces
         navLinks.forEach((link) => {
