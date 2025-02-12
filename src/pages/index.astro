@@ -9,9 +9,19 @@ import Studies from "../components/Studies.astro";
 import Layout from "../layouts/Layout.astro";
 import { linksES } from "../locales/es/header-links";
 import { myInformation } from "../locales/es/about-me";
+import { experienceDataES } from "../locales/es/experience-information";
 
 const description =
   "Desarrollador Web Full Stack. Construyo aplicaciones eficientes y escalables con tecnologías modernas. ¡Conoce mi trabajo!";
+
+const itemInformation = {
+  labelCompanyName: "Empresa",
+  labelTypeJob: "Tipo de trabajo",
+  labelDurationJob: "Duración",
+  labelDescriptionJob: "Descripción",
+  labelFunctionsJob: "Funciones",
+  labelAchievementsJob: "Logros",
+};
 ---
 
 <Layout
@@ -22,7 +32,11 @@ const description =
   <Header links={linksES} />
   <main class="flex flex-col gap-10 px-5 justify-center">
     <AboutMe {...myInformation} />
-    <Experience />
+    <Experience
+      title="Experiencia laboral"
+      items={experienceDataES}
+      itemInformation={itemInformation}
+    />
     <Projects />
     <Studies />
     <Certifications />

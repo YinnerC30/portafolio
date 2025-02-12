@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 export const AccordionList: React.FC<{ list: string[] }> = ({ list = [] }) => {
   return (
@@ -18,13 +18,12 @@ interface ListItem {
 }
 
 interface Props {
-  titleOnShow: string;
   lists: ListItem[];
-  titleOnHidden: string;
-  children?: React.ReactNode,
+
+  children?: React.ReactNode;
 }
 
-export const Accordion: React.FC<Props> = ({ titleOnShow, lists, children, titleOnHidden }) => {
+export const Accordion: React.FC<Props> = ({ lists, children }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleAccordion = () => {
@@ -36,11 +35,8 @@ export const Accordion: React.FC<Props> = ({ titleOnShow, lists, children, title
       <div className="accordion-header" onClick={toggleAccordion}>
         <button
           type="button"
-          className="cursor-pointer flex gap-2 items-center justify-between hover:underline hover:underline-offset-4 w-auto my-2"
+          className="cursor-pointer w-full flex items-end justify-end border-dotted border-t-2 border-t-slate-500"
         >
-          <span className="hover:text-blue-500">
-            {isOpen ? titleOnHidden : titleOnShow}
-          </span>
           {isOpen ? (
             <svg
               xmlns="http://www.w3.org/2000/svg"

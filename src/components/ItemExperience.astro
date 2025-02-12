@@ -1,6 +1,23 @@
 ---
 import Accordion from "./Accordion";
 
+interface ItemExperienceProps {
+  rolName: string;
+  labelCompanyName: string;
+  companyName: string;
+  labelTypeJob: string;
+  typeJob: string;
+  labelDurationJob: string;
+  dateStarted: string;
+  dateFinished: string;
+  labelDescriptionJob: string;
+  descriptionJob: string;
+  labelFunctionsJob: string;
+  functionsJob: [];
+  labelAchievementsJob: string;
+  achievementsJob: [];
+}
+
 const {
   rolName = "",
   companyName = "",
@@ -10,7 +27,13 @@ const {
   descriptionJob = "",
   functionsJob = [],
   achievementsJob = [],
-} = Astro.props;
+  labelCompanyName = "",
+  labelTypeJob = "",
+  labelDurationJob = "",
+  labelDescriptionJob = "",
+  labelFunctionsJob = "",
+  labelAchievementsJob = "",
+} = Astro.props as ItemExperienceProps;
 ---
 
 <li class="list-disc">
@@ -18,30 +41,30 @@ const {
     {rolName}
   </h3>
   <p class="">
-    <span class="font-bold">Empresa: </span>
+    <span class="font-bold">{labelCompanyName}: </span>
     {companyName}
   </p>
   <p class="">
-    <span class="font-bold">Duración: </span>
+    <span class="font-bold">{labelDurationJob}: </span>
     <span class="">{dateStarted} - {dateFinished}</span>
   </p>
 
   <p class="my-4">
-    <span class="font-bold">Tipo de trabajo: </span>
+    <span class="font-bold">{labelTypeJob}: </span>
     {typeJob}
   </p>
   <p class="my-4">
-    <span class="font-bold">Descripción: </span>
+    <span class="font-bold">{labelDescriptionJob}: </span>
     {descriptionJob}
   </p>
 
   <Accordion
     client:load
-    titleOnShow="Mostrar más"
-    titleOnHidden="Ocultar"
+    
+    
     lists={[
-      { label: "Funciones", items: functionsJob },
-      { label: "Logros", items: achievementsJob },
+      { label: labelFunctionsJob, items: functionsJob },
+      { label: labelAchievementsJob, items: achievementsJob },
     ]}
   />
 </li>

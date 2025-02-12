@@ -1,12 +1,23 @@
 ---
 import AboutMe from "../../components/AboutMe.astro";
+import Experience from "../../components/Experience.astro";
 import Header from "../../components/Header.astro";
 import Layout from "../../layouts/Layout.astro";
 import { myInformation } from "../../locales/en/about-me";
+import { experienceDataEN } from "../../locales/en/experience-information";
 import { linksEN } from "../../locales/en/header-links";
 
 const description =
   "Full Stack Web Developer. I build efficient and scalable applications with modern technologies, get to know my work!";
+
+const itemInformation = {
+  labelCompanyName: "Company",
+  labelTypeJob: "Type job",
+  labelDurationJob: "Duration",
+  labelDescriptionJob: "Description",
+  labelFunctionsJob: "Functions",
+  labelAchievementsJob: "Achievements",
+};
 ---
 
 <Layout
@@ -16,4 +27,9 @@ const description =
 >
   <Header links={linksEN} />
   <AboutMe {...myInformation} />
+  <Experience
+    title="Work experience"
+    items={experienceDataEN}
+    itemInformation={itemInformation}
+  />
 </Layout>
