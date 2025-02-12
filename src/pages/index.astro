@@ -7,6 +7,7 @@ import AboutMe from "../components/AboutMe.astro";
 import Projects from "../components/Projects.astro";
 import Studies from "../components/Studies.astro";
 import Layout from "../layouts/Layout.astro";
+import { linksES } from "../locales/es/header-links";
 
 const description =
   "Desarrollador Web Full Stack. Construyo aplicaciones eficientes y escalables con tecnologías modernas. ¡Conoce mi trabajo!";
@@ -17,7 +18,7 @@ const description =
   descriptionPage={description}
   titlePage="Portafolio | Yinner Chilito"
 >
-  <Header />
+  <Header links={linksES} />
   <main class="flex flex-col gap-10 px-5 justify-center">
     <AboutMe />
     <Experience />

@@ -1,0 +1,16 @@
+---
+import Header from "../../components/Header.astro";
+import Layout from "../../layouts/Layout.astro";
+import { linksEN } from "../../locales/en/header-links";
+
+const description =
+  "Full Stack Web Developer. I build efficient and scalable applications with modern technologies, get to know my work!";
+---
+
+<Layout
+  language="en"
+  descriptionPage={description}
+  titlePage="Portfolio | Yinner Chilito"
+>
+  <Header links={linksEN} />
+</Layout>

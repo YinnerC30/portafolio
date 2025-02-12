@@ -33,7 +33,8 @@ const { title, institution, rol, gradeDate, achievements } =
 
   <Accordion
     client:load
-    title="Mostrar más"
+    titleOnShow="Mostrar más"
+    titleOnHidden="Ocultar"
     lists={[{ label: 'Logros académicos', items: achievements! }]}
   />
 </li>

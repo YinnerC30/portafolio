@@ -1,20 +1,19 @@
 ---
-import Accordion from './Accordion';
-import { AccordionList } from './AccordionList';
-import Badge from './Badge.astro';
-import ButtonLink from './ButtonLink.astro';
-import { Carousel } from './Carousel';
-import type { ItemTechnology, ProjectInformation } from './Projects.astro';
+import Accordion from "./Accordion";
+import Badge from "./Badge.astro";
+import ButtonLink from "./ButtonLink.astro";
+import { Carousel } from "./Carousel";
+import type { ItemTechnology, ProjectInformation } from "./Projects.astro";
 
 const {
-  projectName = '',
-  descriptionProject = '',
+  projectName = "",
+  descriptionProject = "",
   stackTechnologies = [],
-  linkRepository = '',
-  linkPreview = '',
+  linkRepository = "",
+  linkPreview = "",
   features = [],
   images = [],
-  videoDemoURL = '',
+  videoDemoURL = "",
 } = Astro.props as ProjectInformation;
 ---
 
@@ -41,7 +40,7 @@ const {
         />
       </div>
     ) : (
-      ''
+      ""
     )
   }
 
@@ -99,7 +98,8 @@ const {
 
   <Accordion
     client:load
-    title="Mostrar más"
-    lists={[{ label: 'Funcionalidades del proyecto', items: features }]}
+    titleOnShow="Mostrar más"
+    titleOnHidden="Ocultar"
+    lists={[{ label: "Funcionalidades del proyecto", items: features }]}
   />
 </li>

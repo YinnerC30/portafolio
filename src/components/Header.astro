@@ -1,11 +1,5 @@
 ---
-const links = [
-  { link: "about-me", label: "Sobre mí" },
-  { link: "experience", label: "Experiencia" },
-  { link: "projects", label: "Proyectos" },
-  { link: "studies", label: "Estudios" },
-  { link: "certifications", label: "Certificaciones" },
-];
+const { links = [] } = Astro.props;
 ---
 
 <header class="sticky top-2">
@@ -14,7 +8,7 @@ const links = [
   >
     <a href="#" class="hidden text-blue-500"></a>
     {
-      links.map(({ label, link }) => (
+      links.map(({ label, link }: any) => (
         <a
           class="hover:text-blue-500 text-sm"
           href={`#${link}`}
@@ -24,6 +18,9 @@ const links = [
         </a>
       ))
     }
+
+    <a href="/" class="text-red-400 text-sm">Español</a>
+    <a href="/en" class="text-blue-400 text-sm">English</a>
   </nav>
 </header>
 

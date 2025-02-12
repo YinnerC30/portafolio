@@ -1,14 +1,13 @@
 ---
-import Accordion from './Accordion';
-import { AccordionList } from './AccordionList';
+import Accordion from "./Accordion";
 
 const {
-  rolName = '',
-  companyName = '',
-  typeJob = '',
-  dateStarted = '',
-  dateFinished = '',
-  descriptionJob = '',
+  rolName = "",
+  companyName = "",
+  typeJob = "",
+  dateStarted = "",
+  dateFinished = "",
+  descriptionJob = "",
   functionsJob = [],
   achievementsJob = [],
 } = Astro.props;
@@ -18,9 +17,6 @@ const {
   <h3 class="font-bold text-xl text-yellow-500">
     {rolName}
   </h3>
-  <!-- <p>
-    Empresa: <span class="font-bold block">{companyName}</span>
-  </p> -->
   <p class="">
     <span class="font-bold">Empresa: </span>
     {companyName}
@@ -41,10 +37,11 @@ const {
 
   <Accordion
     client:load
-    title="Mostrar más"
+    titleOnShow="Mostrar más"
+    titleOnHidden="Ocultar"
     lists={[
-      { label: 'Funciones: ', items: functionsJob },
-      { label: 'Logros: ', items: achievementsJob },
+      { label: "Funciones", items: functionsJob },
+      { label: "Logros", items: achievementsJob },
     ]}
   />
 </li>

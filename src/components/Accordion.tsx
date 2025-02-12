@@ -18,12 +18,13 @@ interface ListItem {
 }
 
 interface Props {
-  title: string;
+  titleOnShow: string;
   lists: ListItem[];
+  titleOnHidden: string;
   children?: React.ReactNode,
 }
 
-export const Accordion: React.FC<Props> = ({ title, lists, children }) => {
+export const Accordion: React.FC<Props> = ({ titleOnShow, lists, children, titleOnHidden }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleAccordion = () => {
@@ -38,7 +39,7 @@ export const Accordion: React.FC<Props> = ({ title, lists, children }) => {
           className="cursor-pointer flex gap-2 items-center justify-between hover:underline hover:underline-offset-4 w-auto my-2"
         >
           <span className="hover:text-blue-500">
-            {isOpen ? 'Ocultar' : title}
+            {isOpen ? titleOnHidden : titleOnShow}
           </span>
           {isOpen ? (
             <svg
