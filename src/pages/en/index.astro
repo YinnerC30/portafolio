@@ -1,6 +1,8 @@
 ---
+import AboutMe from "../../components/AboutMe.astro";
 import Header from "../../components/Header.astro";
 import Layout from "../../layouts/Layout.astro";
+import { myInformation } from "../../locales/en/about-me";
 import { linksEN } from "../../locales/en/header-links";
 
 const description =
@@ -13,4 +15,5 @@ const description =
   titlePage="Portfolio | Yinner Chilito"
 >
   <Header links={linksEN} />
+  <AboutMe {...myInformation} />
 </Layout>

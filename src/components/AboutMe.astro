@@ -1,9 +1,19 @@
 ---
-import ButtonLink from './ButtonLink.astro';
-import imageProfile from '/public/foto-perfil.webp'
+import ButtonLink from "./ButtonLink.astro";
+import imageProfile from "/public/foto-perfil.webp";
+
+interface AboutMeProps {
+  greeting: string;
+  description: string;
+}
+
+const { greeting, description } = Astro.props;
 ---
 
-<section id="about-me" class="flex flex-col-reverse sm:flex-row gap-5 justify-center">
+<section
+  id="about-me"
+  class="flex flex-col-reverse sm:flex-row gap-5 justify-center"
+>
   <img
     class="object-fill w-52 self-center sm:self-start border border-slate-200 rounded-full mt-32"
     src={imageProfile.src}
@@ -11,16 +21,10 @@ import imageProfile from '/public/foto-perfil.webp'
   />
   <div class="flex gap-4 flex-col">
     <h1 class="font-bold text-5xl text-center pt-32">
-      Hola, soy Yinner Chilito 👋🏽
+      {greeting} 👋🏽
     </h1>
     <p class="text-center">
-      Soy un <span class="font-bold text-yellow-500"
-        >analista y desarrollador de sistemas de información</span
-      > especializado en aplicaciones web <span
-        class="font-bold text-yellow-500">full stack</span
-      > , con experiencia en el ciclo de vida de desarrollo de software. Tales como
-      la recolección y definición de requerimientos, diseño, programación, realización
-      de pruebas y despliegue del aplicativo.
+      {description}
     </p>
 
     <div class="flex gap-4 justify-center">
