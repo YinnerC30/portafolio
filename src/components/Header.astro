@@ -4,7 +4,7 @@ const { links = [] } = Astro.props;
 
 <header class="sticky top-2">
   <nav
-    class="px-4 flex gap-5 justify-center py-3 mb-4 flex-wrap border-r-0 rounded-xl bg-slate-800"
+    class="px-4 flex gap-5 justify-center items-center py-3 mb-4 flex-wrap border-r-0 rounded-xl bg-slate-800"
   >
     <a href="#" class="hidden text-blue-500"></a>
     {
@@ -19,8 +19,12 @@ const { links = [] } = Astro.props;
       ))
     }
 
-    <a href="/" class="text-red-400 text-sm">Español</a>
-    <a href="/en" class="text-blue-400 text-sm">English</a>
+    <a href="/" class="text-red-400 text-sm">
+      <img src="/spanish.png" class="h-[30px]" alt="Spanish icon" />
+    </a>
+    <a href="/en" class="text-blue-400 text-sm">
+      <img src="/english.png" class="h-[30px]" alt="English icon" /></a
+    >
   </nav>
 </header>
 
