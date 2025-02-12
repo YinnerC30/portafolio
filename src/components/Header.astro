@@ -1,10 +1,10 @@
 ---
 const links = [
-  { link: 'presentation', label: 'Presentación' },
-  { link: 'experience', label: 'Experiencia' },
-  { link: 'projects', label: 'Proyectos' },
-  { link: 'studies', label: 'Estudios' },
-  { link: 'certifications', label: 'Certificaciones' },
+  { link: "about-me", label: "Sobre mí" },
+  { link: "experience", label: "Experiencia" },
+  { link: "projects", label: "Proyectos" },
+  { link: "studies", label: "Estudios" },
+  { link: "certifications", label: "Certificaciones" },
 ];
 ---
 
@@ -29,13 +29,13 @@ const links = [
 
 <script>
   // Seleccionar todas las secciones y enlaces
-  const sections = document.querySelectorAll('section');
-  const navLinks = document.querySelectorAll('[data-link]');
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll("[data-link]");
 
   // Opciones para el Intersection Observer
   const observerOptions = {
     root: null,
-    rootMargin: '-50% 0px', // Ajusta este valor según necesites
+    rootMargin: "-50% 0px", // Ajusta este valor según necesites
     threshold: 0,
   };
 
@@ -48,10 +48,10 @@ const links = [
 
         // Actualizar clases de los enlaces
         navLinks.forEach((link) => {
-          if (link.getAttribute('data-link') === id) {
-            link.classList.add('text-blue-500');
+          if (link.getAttribute("data-link") === id) {
+            link.classList.add("text-blue-500");
           } else {
-            link.classList.remove('text-blue-500');
+            link.classList.remove("text-blue-500");
           }
         });
       }
