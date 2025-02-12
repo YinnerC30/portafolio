@@ -1,20 +1,29 @@
 ---
-import '../styles/global.css';
-import '@fontsource/onest';
+import "../styles/global.css";
+import "@fontsource/onest";
+
+interface LayoutProps {
+  language: string;
+  descriptionPage: string;
+  titlePage: string;
+}
+
+const {
+  language = "es",
+  descriptionPage,
+  titlePage,
+} = Astro.props as LayoutProps;
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang={language}>
   <head>
     <meta charset="UTF-8" />
 
     <meta name="generator" content={Astro.generator} />
     <link rel="icon" href="/code-xml.svg" />
-    <title>Portafolio | Yinner Chilito</title>
-    <meta
-      name="description"
-      content="Desarrollador Web Full Stack. Construyo aplicaciones eficientes y escalables con tecnologías modernas. ¡Conoce mi trabajo!"
-    />
+    <title>{titlePage}</title>
+    <meta name="description" content={descriptionPage} />
 
     <meta
       name="keywords"
@@ -22,14 +31,8 @@ import '@fontsource/onest';
     />
     <meta name="robots" content="index, follow" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      property="og:image"
-      content="/foto-perfil.webp"
-    />
-    <meta
-      name="twitter:image"
-      content="/foto-perfil.webp"
-    />
+    <meta property="og:image" content="/foto-perfil.webp" />
+    <meta name="twitter:image" content="/foto-perfil.webp" />
   </head>
   <body
     class="lg:w-3/5 h-fit mx-auto bg-gradient-to-b from-slate-900 to-slate-950 text-slate-200 flex justify-center flex-col tracking-wider items-center"
