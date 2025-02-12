@@ -1,0 +1,46 @@
+export const studiesEN = [
+  {
+    title: "Systems Engineering",
+    rol: "Future Engineer",
+    gradeDate: "Currently studying - Expected graduation in 2028",
+    institution: "National Open and Distance University (UNAD)",
+    achievements: [
+      "🌐 Mastery of Information and Communication Technologies (ICT): Advanced skills in designing, implementing, and managing technological infrastructures, including networks, databases, and operating systems.",
+      "📊 Problem-solving and analytical thinking: Competent in modeling, analyzing, and optimizing business processes through tools such as big data, artificial intelligence, and distributed computing.",
+      "💻 Software development: Experienced in designing, developing, and maintaining high-quality software using agile methodologies and modern verification and validation techniques.",
+      "🔐 Information security: Strong knowledge of data protection and cybersecurity to ensure the integrity and confidentiality of information systems.",
+      "📈 Technological project management: Ability to lead projects from planning to execution, using recognized management methodologies and advanced tools.",
+    ],
+  },
+  {
+    title: "Analyst and Developer of Information Systems",
+    rol: "Technologist",
+    gradeDate: "October 13, 2023",
+    institution: "National Learning Service (SENA)",
+    achievements: [
+      "🔍 Analyze customer requirements to build the information system.",
+      "✅ Apply good quality practices in the software development process, according to the reference adopted in the company.",
+      "📚 Understand written and auditory texts in English.",
+      "🛠️ Build the system that meets the requirements of the computer solution.",
+      "🖌️ Design the system according to customer requirements.",
+      "📝 Specify the necessary requirements to develop the information system according to customer needs.",
+      "🚀 Implement the solution that meets the requirements for its operation.",
+      "💼 Participate in the negotiation process of information technology that allows the implementation of the information system.",
+      "✍️ Produce written and oral texts in English.",
+      "🌱 Promote an adequate interaction with oneself, with others and with nature in work and social contexts.",
+    ],
+  },
+  {
+    title: "Computer Systems Technician",
+    rol: "Technician",
+    gradeDate: "December 20, 2020",
+    institution: "National Learning Service (SENA)",
+    achievements: [
+      "💻 Maintenance and repair of systems: Performing diagnostics, preventive maintenance and corrective actions in hardware and software to ensure the optimal functioning of computer systems.",
+      "📡 Network configuration: Configuration and management of local area networks (LAN) and wireless networks (Wi-Fi) to ensure connectivity and information exchange between devices.",
+      "🖥️ Technical support: Provide technical assistance to users, efficiently and promptly solving hardware, software, and connectivity problems.",
+      "📊 Systems administration: Manage servers, operating systems, and applications, ensuring their availability, performance, and responsiveness.",
+      "💼 Management of Microsoft office automation software: Mastering tools such as Word, Excel and PowerPoint to efficiently create documents, spreadsheets and presentations.",
+    ],
+  },
+];

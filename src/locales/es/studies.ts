@@ -1,0 +1,46 @@
+export const studiesES = [
+  {
+    title: "Ingeniería de Sistemas",
+    rol: "futuro ingeniero",
+    gradeDate: "cursando - graduación aprox en 2028",
+    institution: "Universidad Nacional Abierta y a Distancia (UNAD)",
+    achievements: [
+      "🌐 Dominio de las Tecnologías de la Información y la Comunicación (TIC): Adquisición de habilidades avanzadas en el diseño, implementación y gestión de infraestructuras tecnológicas, incluyendo redes, bases de datos y sistemas operativos.",
+      "📊 Resolución de problemas y pensamiento analítico: Competente en el modelado, análisis y optimización de procesos de negocio a través de herramientas como big data, inteligencia artificial y computación distribuida.",
+      "💻 Desarrollo de software: Con experiencia en el diseño, desarrollo y mantenimiento de software de alta calidad utilizando metodologías ágiles y técnicas modernas de verificación y validación.",
+      "🔐 Seguridad de la información: Sólidos conocimientos en protección de datos y ciberseguridad para garantizar la integridad y confidencialidad de los sistemas de información.",
+      "📈 Gestión de proyectos tecnológicos: Habilidad para liderar proyectos desde la planificación hasta la ejecución, utilizando metodologías de gestión reconocidas y herramientas avanzadas.",
+    ],
+  },
+  {
+    title: "Analista y Desarrollador de Sistemas de Información",
+    rol: "Tecnólogo",
+    gradeDate: "13 de octubre de 2023",
+    institution: "Servicio Nacional de Aprendizaje (SENA)",
+    achievements: [
+      "🔍 Analizar los requisitos del cliente para construir el sistema de información.",
+      "✅ Aplicar buenas prácticas de calidad en el proceso de desarrollo de software, de acuerdo con la referencia adoptada en la empresa.",
+      "📚 Comprender textos escritos y auditivos en inglés.",
+      "🛠️ Construir el sistema que cumpla con los requisitos de la solución informática.",
+      "🖌️ Diseñar el sistema de acuerdo a los requerimientos del cliente.",
+      "📝 Especificar los requerimientos necesarios para desarrollar el sistema de información de acuerdo a las necesidades del cliente.",
+      "🚀 Implementar la solución que cumpla con los requisitos para su funcionamiento.",
+      "💼 Participar en el proceso de negociación de la tecnología de la información que permita la implementación del sistema de información.",
+      "✍️ Producir textos escritos y orales en inglés.",
+      "🌱 Promover una adecuada interacción consigo mismo, con los demás y con la naturaleza en contextos laborales y sociales.",
+    ],
+  },
+  {
+    title: "Técnico en Sistemas de Computo",
+    rol: "Técnico",
+    gradeDate: "20 de diciembre de 2020",
+    institution: "Servicio Nacional de Aprendizaje (SENA)",
+    achievements: [
+      "💻 Mantenimiento y reparación de sistemas: Realización de diagnósticos, mantenimiento preventivo y acciones correctivas en hardware y software para asegurar el óptimo funcionamiento de los sistemas informáticos.",
+      "📡 Configuración de redes: Configuración y gestión de redes de área local (LAN) y redes inalámbricas (Wi-Fi) para garantizar la conectividad y el intercambio de información entre dispositivos.",
+      "🖥️ Soporte técnico: Proporcionar asistencia técnica a los usuarios, resolviendo de manera eficiente y oportuna problemas de hardware, software y conectividad.",
+      "📊 Administración de sistemas: Gestionar servidores, sistemas operativos y aplicaciones, garantizando su disponibilidad, rendimiento y capacidad de respuesta.",
+      "💼 Gestión de software ofimático de Microsoft: Dominar herramientas como Word, Excel y PowerPoint para crear eficientemente documentos, hojas de cálculo y presentaciones.",
+    ],
+  },
+];

@@ -11,6 +11,7 @@ import { linksES } from "../locales/es/header-links";
 import { myInformation } from "../locales/es/about-me";
 import { experienceDataES } from "../locales/es/experience-information";
 import { projectsES } from "../locales/es/projects-information";
+import { studiesES } from "../locales/es/studies";
 
 const description =
   "Desarrollador Web Full Stack. Construyo aplicaciones eficientes y escalables con tecnologías modernas. ¡Conoce mi trabajo!";
@@ -30,6 +31,12 @@ const itemProjectInformation = {
   labelStackTechnologies: "Tecnologías utilizadas",
   labelDescriptionProject: "Descripción",
   labelFeaturesProject: "Funcionalidades",
+};
+const itemStudyInformation = {
+  labelRol: "Titulo otorgado",
+  labelInstitution: "Institución",
+  labelGradeDate: "Fecha de graduación",
+  labelAchievements: "Logros",
 };
 ---
 
@@ -51,7 +58,7 @@ const itemProjectInformation = {
       projects={projectsES}
       itemInformation={itemProjectInformation}
     />
-    <Studies />
+    <Studies title="Educación formal" studies={studiesES}  itemInformation={itemStudyInformation}/>
     <Certifications />
   </main>
   <Footer />

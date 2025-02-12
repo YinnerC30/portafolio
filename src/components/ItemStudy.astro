@@ -1,16 +1,28 @@
 ---
-import Accordion from './Accordion';
+import Accordion from "./Accordion";
 
 export interface ItemStudyProps {
   title: string;
+  labelRol: string;
   rol: string;
+  labelInstitution: string;
   institution: string;
+  labelGradeDate: string;
   gradeDate: string;
-  // description: string;
-  achievements?: string[];
+  labelAchievements: string;
+  achievements: string[];
 }
-const { title, institution, rol, gradeDate, achievements } =
-  Astro.props as ItemStudyProps;
+const {
+  title,
+  institution,
+  rol,
+  gradeDate,
+  achievements,
+  labelRol,
+  labelInstitution,
+  labelGradeDate,
+  labelAchievements,
+} = Astro.props as ItemStudyProps;
 ---
 
 <li class="list-disc">
@@ -18,23 +30,21 @@ const { title, institution, rol, gradeDate, achievements } =
     {title}
   </h3>
   <p class="">
-    <span class="font-bold">Titulo otorgado: </span>
+    <span class="font-bold">{labelRol}: </span>
     <span> {rol}</span>
   </p>
 
   <p class="">
-    <span class="font-bold">Fecha graduación: </span>
+    <span class="font-bold">{labelGradeDate}: </span>
     <span class="">{gradeDate}</span>
   </p>
   <p class="">
-    <span class="font-bold">Institución: </span>
+    <span class="font-bold">{labelInstitution}: </span>
     <span class="">{institution}</span>
   </p>
 
   <Accordion
     client:load
-    titleOnShow="Mostrar más"
-    titleOnHidden="Ocultar"
-    lists={[{ label: 'Logros académicos', items: achievements! }]}
+    lists={[{ label: labelAchievements, items: achievements! }]}
   />
 </li>
