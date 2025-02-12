@@ -1,9 +1,26 @@
 ---
+import type { ItemTechnology } from "../interfaces/ItemTechnology";
+import type { ProjectInformation } from "../interfaces/ProjectInformation";
 import Accordion from "./Accordion";
 import Badge from "./Badge.astro";
 import ButtonLink from "./ButtonLink.astro";
 import { Carousel } from "./Carousel";
-import type { ItemTechnology, ProjectInformation } from "./Projects.astro";
+
+interface ItemProjectProps {
+  projectName: string;
+  descriptionProject: string;
+  stackTechnologies: [];
+  linkRepository: string;
+  linkPreview: string;
+  features: [];
+  images: [];
+  videoDemoURL: string;
+  labelImages: string;
+  labelVideoDemoURL: string;
+  labelStackTechnologies: string;
+  labelDescriptionProject: string;
+  labelFeaturesProject: string;
+}
 
 const {
   projectName = "",
@@ -12,9 +29,14 @@ const {
   linkRepository = "",
   linkPreview = "",
   features = [],
+  labelImages = "",
+  labelVideoDemoURL = "",
+  labelStackTechnologies = "",
+  labelDescriptionProject = "",
   images = [],
   videoDemoURL = "",
-} = Astro.props as ProjectInformation;
+  labelFeaturesProject = "",
+} = Astro.props as ItemProjectProps;
 ---
 
 <li class="list-disc">
@@ -22,13 +44,13 @@ const {
     {projectName}
   </h3>
 
-  <h3 class="font-bold mt-4">Imágenes de ejemplo:</h3>
+  <h3 class="font-bold mt-4">{labelImages}:</h3>
   <Carousel client:load images={images} />
 
   {
     !!videoDemoURL ? (
       <div>
-        <h3 class="font-bold my-4">Video demostrativo:</h3>
+        <h3 class="font-bold my-4">{labelVideoDemoURL}:</h3>
         <iframe
           class="w-full"
           height="400"
@@ -44,7 +66,7 @@ const {
     )
   }
 
-  <h3 class="font-bold mt-4">Tecnologías utilizadas:</h3>
+  <h3 class="font-bold mt-4">{labelStackTechnologies}:</h3>
   <div class="flex gap-2 flex-wrap mt-2">
     {
       stackTechnologies.map((technology: ItemTechnology) => (
@@ -54,7 +76,7 @@ const {
   </div>
 
   <div class="flex gap-4 flex-wrap mt-4">
-    <ButtonLink name="Código" hrefLink={linkRepository}>
+    <ButtonLink name="Code" hrefLink={linkRepository}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -92,14 +114,12 @@ const {
   </div>
 
   <h3 class="my-4">
-    <span class="font-bold">Descripción: </span>
+    <span class="font-bold">{labelDescriptionProject}: </span>
     {descriptionProject}
   </h3>
 
   <Accordion
     client:load
-    titleOnShow="Mostrar más"
-    titleOnHidden="Ocultar"
-    lists={[{ label: "Funcionalidades del proyecto", items: features }]}
+    lists={[{ label: labelFeaturesProject, items: features }]}
   />
 </li>

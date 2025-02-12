@@ -10,17 +10,26 @@ import Layout from "../layouts/Layout.astro";
 import { linksES } from "../locales/es/header-links";
 import { myInformation } from "../locales/es/about-me";
 import { experienceDataES } from "../locales/es/experience-information";
+import { projectsES } from "../locales/es/projects-information";
 
 const description =
   "Desarrollador Web Full Stack. Construyo aplicaciones eficientes y escalables con tecnologías modernas. ¡Conoce mi trabajo!";
 
-const itemInformation = {
+const itemExperienceInformation = {
   labelCompanyName: "Empresa",
   labelTypeJob: "Tipo de trabajo",
   labelDurationJob: "Duración",
   labelDescriptionJob: "Descripción",
   labelFunctionsJob: "Funciones",
   labelAchievementsJob: "Logros",
+};
+
+const itemProjectInformation = {
+  labelImages: "Imágenes de ejemplo",
+  labelVideoDemoURL: "Video demo",
+  labelStackTechnologies: "Tecnologías utilizadas",
+  labelDescriptionProject: "Descripción",
+  labelFeaturesProject: "Funcionalidades",
 };
 ---
 
@@ -35,9 +44,13 @@ const itemInformation = {
     <Experience
       title="Experiencia laboral"
       items={experienceDataES}
-      itemInformation={itemInformation}
+      itemInformation={itemExperienceInformation}
     />
-    <Projects />
+    <Projects
+      title="Proyectos"
+      projects={projectsES}
+      itemInformation={itemProjectInformation}
+    />
     <Studies />
     <Certifications />
   </main>

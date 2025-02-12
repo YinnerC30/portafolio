@@ -2,21 +2,31 @@
 import AboutMe from "../../components/AboutMe.astro";
 import Experience from "../../components/Experience.astro";
 import Header from "../../components/Header.astro";
+import Projects from "../../components/Projects.astro";
 import Layout from "../../layouts/Layout.astro";
 import { myInformation } from "../../locales/en/about-me";
 import { experienceDataEN } from "../../locales/en/experience-information";
 import { linksEN } from "../../locales/en/header-links";
+import { projectsEN } from "../../locales/en/projects-information";
 
 const description =
   "Full Stack Web Developer. I build efficient and scalable applications with modern technologies, get to know my work!";
 
-const itemInformation = {
+const itemExperienceInformation = {
   labelCompanyName: "Company",
   labelTypeJob: "Type job",
   labelDurationJob: "Duration",
   labelDescriptionJob: "Description",
   labelFunctionsJob: "Functions",
   labelAchievementsJob: "Achievements",
+};
+
+const itemProjectInformation = {
+  labelImages: "Example Images",
+  labelVideoDemoURL: "Demo Video",
+  labelStackTechnologies: "Technologies Used",
+  labelDescriptionProject: "Description",
+  labelFeaturesProject: "Features",
 };
 ---
 
@@ -30,6 +40,11 @@ const itemInformation = {
   <Experience
     title="Work experience"
     items={experienceDataEN}
-    itemInformation={itemInformation}
+    itemInformation={itemExperienceInformation}
+  />
+  <Projects
+    title="Projects"
+    projects={projectsEN}
+    itemInformation={itemProjectInformation}
   />
 </Layout>
