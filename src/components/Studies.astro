@@ -6,18 +6,14 @@ interface StudiesProps {
   title: string;
   studies: ItemStudyProps[];
   itemInformation: {
-    labelCompanyName: string;
-    labelTypeJob: string;
-    labelDurationJob: string;
-    labelDescriptionJob: string;
-    labelFunctionsJob: string;
-    labelAchievementsJob: string;
+    labelRol: string;
+    labelInstitution: string;
+    labelGradeDate: string;
+    labelAchievements: string;
   };
 }
 
 const { title, studies = [], itemInformation } = Astro.props as StudiesProps;
-
-
 ---
 
 <section id="studies">

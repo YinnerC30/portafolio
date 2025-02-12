@@ -12,6 +12,7 @@ import { myInformation } from "../locales/es/about-me";
 import { experienceDataES } from "../locales/es/experience-information";
 import { projectsES } from "../locales/es/projects-information";
 import { studiesES } from "../locales/es/studies";
+import { certificationsES } from "../locales/es/certifications";
 
 const description =
   "Desarrollador Web Full Stack. Construyo aplicaciones eficientes y escalables con tecnologías modernas. ¡Conoce mi trabajo!";
@@ -38,6 +39,10 @@ const itemStudyInformation = {
   labelGradeDate: "Fecha de graduación",
   labelAchievements: "Logros",
 };
+const itemCertificateInformation = {
+  labelInstitution: "Institución",
+  labelGradeDate: "Fecha de graduación",
+};
 ---
 
 <Layout
@@ -58,8 +63,16 @@ const itemStudyInformation = {
       projects={projectsES}
       itemInformation={itemProjectInformation}
     />
-    <Studies title="Educación formal" studies={studiesES}  itemInformation={itemStudyInformation}/>
-    <Certifications />
+    <Studies
+      title="Educación formal"
+      studies={studiesES}
+      itemInformation={itemStudyInformation}
+    />
+    <Certifications
+      title="Certificaciones y cursos"
+      certifications={certificationsES}
+      itemInformation={itemCertificateInformation}
+    />
   </main>
   <Footer />
 </Layout>

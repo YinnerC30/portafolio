@@ -1,11 +1,14 @@
 ---
 import AboutMe from "../../components/AboutMe.astro";
+import Certifications from "../../components/Certifications.astro";
 import Experience from "../../components/Experience.astro";
+import Footer from "../../components/Footer.astro";
 import Header from "../../components/Header.astro";
 import Projects from "../../components/Projects.astro";
 import Studies from "../../components/Studies.astro";
 import Layout from "../../layouts/Layout.astro";
 import { myInformation } from "../../locales/en/about-me";
+import { certificationsEN } from "../../locales/en/certifications";
 import { experienceDataEN } from "../../locales/en/experience-information";
 import { linksEN } from "../../locales/en/header-links";
 import { projectsEN } from "../../locales/en/projects-information";
@@ -37,6 +40,11 @@ const itemStudyInformation = {
   labelGradeDate: "Graduation Date",
   labelAchievements: "Achievements",
 };
+
+const itemCertificateInformation = {
+  labelInstitution: "Institution",
+  labelGradeDate: "Degree Awarded",
+};
 ---
 
 <Layout
@@ -62,5 +70,11 @@ const itemStudyInformation = {
       studies={studiesEN}
       itemInformation={itemStudyInformation}
     />
+    <Certifications
+      title="Certifications and courses"
+      certifications={certificationsEN}
+      itemInformation={itemCertificateInformation}
+    />
   </main>
+  <Footer />
 </Layout>

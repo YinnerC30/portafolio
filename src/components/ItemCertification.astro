@@ -1,32 +1,39 @@
 ---
-import Accordion from './Accordion';
-import ButtonLink from './ButtonLink.astro';
+import Accordion from "./Accordion";
+import ButtonLink from "./ButtonLink.astro";
 
 export interface ItemCertificationProps {
   title: string;
   institution: string;
   expeditionDate: string;
   url: string;
+  labelInstitution: string;
+  labelGradeDate: string;
 }
-const { title, institution, expeditionDate, url } =
+const { title, institution, expeditionDate, url, labelGradeDate, labelInstitution } =
   Astro.props as ItemCertificationProps;
 ---
 
-<li class="list-disc w-[350px] ">
+<li class="list-disc w-[350px]">
   <h3 class="font-bold text-xl text-yellow-500">
     {title}
   </h3>
 
   <p class="">
-    <span class="font-bold">Fecha expedición: </span>
+    <span class="font-bold">{labelGradeDate}: </span>
     <span class="">{expeditionDate}</span>
   </p>
   <p class="">
-    <span class="font-bold">Entidad certificadora: </span>
+    <span class="font-bold">{labelInstitution}: </span>
     <span class="">{institution}</span>
   </p>
 
-  <ButtonLink name="Comprobar" hrefLink={url} className="w-44 mt-4" disabled={url.length === 0}>
+  <ButtonLink
+    name="Link"
+    hrefLink={url}
+    className="w-44 mt-4"
+    disabled={url.length === 0}
+  >
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="24"
