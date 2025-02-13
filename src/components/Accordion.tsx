@@ -35,7 +35,7 @@ export const Accordion: React.FC<Props> = ({ lists, children }) => {
       <div className="accordion-header" onClick={toggleAccordion}>
         <button
           type="button"
-          className="cursor-pointer w-full flex items-end justify-end border-dashed border-t-2 border-t-slate-500 mt-4 "
+          className="cursor-pointer w-full flex items-end justify-center border-dashed border-t-2 border-t-slate-500 mt-4 "
         >
           {isOpen ? (
             <svg
@@ -71,7 +71,7 @@ export const Accordion: React.FC<Props> = ({ lists, children }) => {
         </button>
       </div>
       {isOpen && (
-        <div className="accordion-content bg-slate-700 p-5 rounded-md">
+        <div className="accordion-content bg-slate-700 p-5 rounded-md ">
           {children}
           {lists.map((list) => (
             <>
