@@ -31,64 +31,64 @@ export const projectsEN: ProjectInformation[] = [
     ],
     images: [
       {
-        url: "/portafolio-yinner-chilito/images-cropco/cropco-1.webp",
+        url: "/portafolio/images-cropco/cropco-1.webp",
         show: false,
       },
       {
-        url: "/portafolio-yinner-chilito/images-cropco/cropco-1.1.webp",
+        url: "/portafolio/images-cropco/cropco-1.1.webp",
         show: false,
       },
       {
-        url: "/portafolio-yinner-chilito/images-cropco/cropco-2.webp",
+        url: "/portafolio/images-cropco/cropco-2.webp",
         show: false,
       },
       {
-        url: "/portafolio-yinner-chilito/images-cropco/cropco-2.1.webp",
+        url: "/portafolio/images-cropco/cropco-2.1.webp",
         show: false,
       },
       {
-        url: "/portafolio-yinner-chilito/images-cropco/cropco-3.webp",
+        url: "/portafolio/images-cropco/cropco-3.webp",
         show: false,
       },
 
       {
-        url: "/portafolio-yinner-chilito/images-cropco/cropco-4.webp",
+        url: "/portafolio/images-cropco/cropco-4.webp",
         show: false,
       },
       {
-        url: "/portafolio-yinner-chilito/images-cropco/cropco-4.1.webp",
+        url: "/portafolio/images-cropco/cropco-4.1.webp",
         show: false,
       },
       {
-        url: "/portafolio-yinner-chilito/images-cropco/cropco-5.webp",
+        url: "/portafolio/images-cropco/cropco-5.webp",
         show: false,
       },
       {
-        url: "/portafolio-yinner-chilito/images-cropco/cropco-5.1.webp",
+        url: "/portafolio/images-cropco/cropco-5.1.webp",
         show: false,
       },
       {
-        url: "/portafolio-yinner-chilito/images-cropco/cropco-6.webp",
+        url: "/portafolio/images-cropco/cropco-6.webp",
         show: false,
       },
       {
-        url: "/portafolio-yinner-chilito/images-cropco/cropco-6.1.webp",
+        url: "/portafolio/images-cropco/cropco-6.1.webp",
         show: false,
       },
       {
-        url: "/portafolio-yinner-chilito/images-cropco/cropco-7.webp",
+        url: "/portafolio/images-cropco/cropco-7.webp",
         show: false,
       },
       {
-        url: "/portafolio-yinner-chilito/images-cropco/cropco-7.1.webp",
+        url: "/portafolio/images-cropco/cropco-7.1.webp",
         show: false,
       },
       {
-        url: "/portafolio-yinner-chilito/images-cropco/cropco-8.webp",
+        url: "/portafolio/images-cropco/cropco-8.webp",
         show: false,
       },
       {
-        url: "/portafolio-yinner-chilito/images-cropco/cropco-8.1.webp",
+        url: "/portafolio/images-cropco/cropco-8.1.webp",
         show: false,
       },
     ],
