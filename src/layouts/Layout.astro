@@ -1,6 +1,6 @@
 ---
-import "../styles/global.css";
-import "@fontsource/onest";
+import '../styles/global.css';
+import '@fontsource/onest';
 
 interface LayoutProps {
   language: string;
@@ -9,7 +9,7 @@ interface LayoutProps {
 }
 
 const {
-  language = "es",
+  language = 'es',
   descriptionPage,
   titlePage,
 } = Astro.props as LayoutProps;
@@ -21,7 +21,7 @@ const {
     <meta charset="UTF-8" />
 
     <meta name="generator" content={Astro.generator} />
-    <link rel="icon" href="/code-xml.svg" />
+    <link rel="icon" href="/portafolio-yinner-chilito/code-xml.svg" />
     <title>{titlePage}</title>
     <meta name="description" content={descriptionPage} />
 
@@ -31,8 +31,14 @@ const {
     />
     <meta name="robots" content="index, follow" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:image" content="/foto-perfil.webp" />
-    <meta name="twitter:image" content="/foto-perfil.webp" />
+    <meta
+      property="og:image"
+      content="/portafolio-yinner-chilito/foto-perfil.webp"
+    />
+    <meta
+      name="twitter:image"
+      content="/portafolio-yinner-chilito/foto-perfil.webp"
+    />
   </head>
   <body
     class="lg:w-3/5 h-fit mx-auto bg-gradient-to-b from-slate-900 to-slate-950 text-slate-200 flex justify-center flex-col tracking-wider items-center"
