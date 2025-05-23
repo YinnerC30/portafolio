@@ -6,7 +6,7 @@ import react from '@astrojs/react';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://YinnerC30.github.io',
-  base: 'portafolio-yinner-chilito',
+  base: '/portafolio-yinner-chilito',
   vite: {
     plugins: [tailwindcss()],
   },
