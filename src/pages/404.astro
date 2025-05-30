@@ -1,13 +1,23 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from '../layouts/Layout.astro';
+import { ui } from '../i18n/ui';
+
+const lang = 'es'; // Por defecto en español
 ---
 
-<Layout>
-  <main class="h-screen flex flex-col justify-center items-center">
-    <span class="block text-6xl">404</span>
-    <h1 class="text-3xl">La pagina solicitada no fue encontrada</h1>
-    <a href="/" class="py-2 px-4 bg-gray-400 text-slate-800 rounded-sm my-4"
-      >Ir al inicio</a
+<Layout
+  language={lang}
+  descriptionPage="Página no encontrada"
+  titlePage="404 - Página no encontrada"
+>
+  <main class="flex flex-col items-center justify-center min-h-[60vh] text-center px-4">
+    <h1 class="text-6xl font-bold text-blue-500 mb-4">404</h1>
+    <p class="text-xl mb-8">Lo sentimos, la página que buscas no existe.</p>
+    <a
+      href={`/${lang}`}
+      class="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
     >
+      Volver al inicio
+    </a>
   </main>
 </Layout>

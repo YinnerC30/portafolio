@@ -1,0 +1,95 @@
+---
+import AboutMe from "../../components/AboutMe.astro";
+import Certifications from "../../components/Certifications.astro";
+import Experience from "../../components/Experience.astro";
+import Footer from "../../components/Footer.astro";
+import Header from "../../components/Header.astro";
+import Projects from "../../components/Projects.astro";
+import Studies from "../../components/Studies.astro";
+import Layout from "../../layouts/Layout.astro";
+import { ui, type Language } from "../../i18n/ui";
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'es' } },
+    { params: { lang: 'en' } },
+  ];
+}
+
+const { lang } = Astro.params;
+const currentLang = lang as Language;
+
+// Importar las traducciones según el idioma
+const { translations } = currentLang === 'en' 
+  ? await import('../../locales/en/translations')
+  : await import('../../locales/es/translations');
+
+const description = currentLang === 'en'
+  ? "Full Stack Web Developer. I build efficient and scalable applications with modern technologies, get to know my work!"
+  : "Desarrollador Web Full Stack. Construyo aplicaciones eficientes y escalables con tecnologías modernas. ¡Conoce mi trabajo!";
+
+const titlePage = currentLang === 'en'
+  ? "Portfolio | Yinner Chilito"
+  : "Portafolio | Yinner Chilito";
+
+const itemExperienceInformation = {
+  labelCompanyName: ui[currentLang]['experience.company'],
+  labelTypeJob: ui[currentLang]['experience.type'],
+  labelDurationJob: ui[currentLang]['experience.duration'],
+  labelDescriptionJob: ui[currentLang]['experience.description'],
+  labelFunctionsJob: ui[currentLang]['experience.functions'],
+  labelAchievementsJob: ui[currentLang]['experience.achievements'],
+};
+
+const itemProjectInformation = {
+  labelImages: ui[currentLang]['projects.images'],
+  labelVideoDemoURL: ui[currentLang]['projects.demo'],
+  labelStackTechnologies: ui[currentLang]['projects.technologies'],
+  labelDescriptionProject: ui[currentLang]['projects.description'],
+  labelFeaturesProject: ui[currentLang]['projects.features'],
+};
+
+const itemStudyInformation = {
+  labelRol: ui[currentLang]['studies.degree'],
+  labelInstitution: ui[currentLang]['studies.institution'],
+  labelGradeDate: ui[currentLang]['studies.graduation'],
+  labelAchievements: ui[currentLang]['studies.achievements'],
+};
+
+const itemCertificateInformation = {
+  labelInstitution: ui[currentLang]['certifications.institution'],
+  labelGradeDate: ui[currentLang]['certifications.date'],
+};
+---
+
+<Layout
+  language={currentLang}
+  descriptionPage={description}
+  titlePage={titlePage}
+>
+  <Header lang={currentLang} />
+  <main class="flex flex-col gap-10 px-5 justify-center">
+    <AboutMe {...translations.myInformation} />
+    <Experience
+      title={ui[currentLang]['nav.experience']}
+      items={translations.experienceData}
+      itemInformation={itemExperienceInformation}
+    />
+    <Projects
+      title={ui[currentLang]['nav.projects']}
+      projects={translations.projects}
+      itemInformation={itemProjectInformation}
+    />
+    <Studies
+      title={ui[currentLang]['nav.studies']}
+      studies={translations.studies}
+      itemInformation={itemStudyInformation}
+    />
+    <Certifications
+      title={ui[currentLang]['nav.certifications']}
+      certifications={translations.certifications}
+      itemInformation={itemCertificateInformation}
+    />
+  </main>
+  <Footer />
+</Layout> 

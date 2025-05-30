@@ -1,5 +1,19 @@
 ---
-const { links = [] } = Astro.props;
+import { ui, type Language } from '../i18n/ui';
+
+interface Props {
+  lang: Language;
+}
+
+const { lang } = Astro.props;
+
+const links = [
+  { link: 'about-me', label: ui[lang]['nav.about'] },
+  { link: 'experience', label: ui[lang]['nav.experience'] },
+  { link: 'projects', label: ui[lang]['nav.projects'] },
+  { link: 'studies', label: ui[lang]['nav.studies'] },
+  { link: 'certifications', label: ui[lang]['nav.certifications'] },
+];
 ---
 
 <header class="sticky top-2">
@@ -8,7 +22,7 @@ const { links = [] } = Astro.props;
   >
     <a href="#" class="hidden text-blue-500"></a>
     {
-      links.map(({ label, link }: any) => (
+      links.map(({ label, link }) => (
         <a
           class="hover:text-blue-500 text-sm"
           href={`#${link}`}
@@ -19,12 +33,20 @@ const { links = [] } = Astro.props;
       ))
     }
 
-    <a href="/" class="text-red-400 text-sm">
-      <img src="/spanish.png" class="h-[30px]" alt="Spanish icon" />
-    </a>
-    <a href="/en" class="text-blue-400 text-sm">
-      <img src="/english.png" class="h-[30px]" alt="English icon" /></a
-    >
+    <div class="flex gap-2">
+      <a
+        href="/es"
+        class={`text-sm ${lang === 'es' ? 'text-blue-500' : 'text-slate-200'}`}
+      >
+        <img src="/spanish.png" class="h-[30px]" alt="Spanish icon" />
+      </a>
+      <a
+        href="/en"
+        class={`text-sm ${lang === 'en' ? 'text-blue-500' : 'text-slate-200'}`}
+      >
+        <img src="/english.png" class="h-[30px]" alt="English icon" />
+      </a>
+    </div>
   </nav>
 </header>
 
@@ -36,7 +58,7 @@ const { links = [] } = Astro.props;
   // Opciones para el Intersection Observer
   const observerOptions = {
     root: null,
-    rootMargin: "-50% 0px", // Ajusta este valor según necesites
+    rootMargin: "-50% 0px",
     threshold: 0,
   };
 
