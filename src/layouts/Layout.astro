@@ -31,8 +31,39 @@ const {
     />
     <meta name="robots" content="index, follow" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:title" content={titlePage} />
+    <meta property="og:description" content={descriptionPage} />
     <meta property="og:image" content="/foto-perfil.webp" />
-    <meta name="twitter:image" content="/foto-perfil.webp" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={Astro.url} />
+    <meta property="twitter:title" content={titlePage} />
+    <meta property="twitter:description" content={descriptionPage} />
+    <meta property="twitter:image" content="/foto-perfil.webp" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href={Astro.url} />
+    
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Yinner Chilito",
+        "url": {Astro.url},
+        "image": "/foto-perfil.webp",
+        "jobTitle": "Full Stack Developer",
+        "description": {descriptionPage},
+        "sameAs": [
+          "https://www.linkedin.com/in/yinner-stiven-chilito-medina/"
+        ]
+      }
+    </script>
   </head>
   <body
     class="lg:w-3/5 h-fit mx-auto bg-gradient-to-b from-slate-900 to-slate-950 text-slate-200 flex justify-center flex-col tracking-wider items-center"

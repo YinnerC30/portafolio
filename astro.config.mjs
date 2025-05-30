@@ -10,6 +10,8 @@ export default defineConfig({
   build: {
     format: 'directory',
   },
+  site: 'https://yinnerchilito.tech', // Reemplaza con tu dominio real
+  compressHTML: true,
   vite: {
     plugins: [tailwindcss()],
     build: {
