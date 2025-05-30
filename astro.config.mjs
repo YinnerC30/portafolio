@@ -22,8 +22,10 @@ export default defineConfig({
       },
     },
   },
-  integrations: [react({
-    include: ['**/react/*'],
-    experimentalReactChildren: true,
-  }),],
+  integrations: [
+    react({
+      include: ['**/react/*'],
+      experimentalReactChildren: true,
+    }),
+  ],
 });
