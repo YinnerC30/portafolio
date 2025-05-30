@@ -34,31 +34,26 @@ const links = [
     }
 
     <div class="flex gap-2">
-      <a
-        href="/es"
-        class={`text-sm ${lang === 'es' ? 'text-blue-500' : 'text-slate-200'}`}
+      <select
+        class="bg-slate-700 text-slate-200 text-sm rounded-lg px-2 py-1 cursor-pointer hover:bg-slate-700 transition-colors"
+        onchange="window.location.href = this.value"
       >
-        <img src="/spanish.webp" class="h-[30px]" alt="Spanish icon" />
-      </a>
-      <a
-        href="/en"
-        class={`text-sm ${lang === 'en' ? 'text-blue-500' : 'text-slate-200'}`}
-      >
-        <img src="/english.webp" class="h-[30px]" alt="English icon" />
-      </a>
+        <option value="/es" selected={lang === 'es'}>Español</option>
+        <option value="/en" selected={lang === 'en'}>English</option>
+      </select>
     </div>
   </nav>
 </header>
 
 <script>
   // Seleccionar todas las secciones y enlaces
-  const sections = document.querySelectorAll("section");
-  const navLinks = document.querySelectorAll("[data-link]");
+  const sections = document.querySelectorAll('section');
+  const navLinks = document.querySelectorAll('[data-link]');
 
   // Opciones para el Intersection Observer
   const observerOptions = {
     root: null,
-    rootMargin: "-50% 0px",
+    rootMargin: '-50% 0px',
     threshold: 0,
   };
 
@@ -71,10 +66,10 @@ const links = [
 
         // Actualizar clases de los enlaces
         navLinks.forEach((link) => {
-          if (link.getAttribute("data-link") === id) {
-            link.classList.add("text-blue-500");
+          if (link.getAttribute('data-link') === id) {
+            link.classList.add('text-blue-500');
           } else {
-            link.classList.remove("text-blue-500");
+            link.classList.remove('text-blue-500');
           }
         });
       }
