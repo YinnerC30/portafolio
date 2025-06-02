@@ -1,10 +1,10 @@
 ---
-import type { ItemTechnology } from "../interfaces/ItemTechnology";
-import type { ProjectInformation } from "../interfaces/ProjectInformation";
-import Accordion from "./Accordion";
-import Badge from "./Badge.astro";
-import ButtonLink from "./ButtonLink.astro";
-import { Carousel } from "./Carousel";
+import type { ItemTechnology } from '../interfaces/ItemTechnology';
+import type { ProjectInformation } from '../interfaces/ProjectInformation';
+import Accordion from './Accordion';
+import Badge from './Badge.astro';
+import ButtonLink from './ButtonLink.astro';
+import { Carousel } from './Carousel';
 
 interface ItemProjectProps {
   projectName: string;
@@ -23,19 +23,19 @@ interface ItemProjectProps {
 }
 
 const {
-  projectName = "",
-  descriptionProject = "",
+  projectName = '',
+  descriptionProject = '',
   stackTechnologies = [],
-  linkRepository = "",
-  linkPreview = "",
+  linkRepository = '',
+  linkPreview = '',
   features = [],
-  labelImages = "",
-  labelVideoDemoURL = "",
-  labelStackTechnologies = "",
-  labelDescriptionProject = "",
+  labelImages = '',
+  labelVideoDemoURL = '',
+  labelStackTechnologies = '',
+  labelDescriptionProject = '',
   images = [],
-  videoDemoURL = "",
-  labelFeaturesProject = "",
+  videoDemoURL = '',
+  labelFeaturesProject = '',
 } = Astro.props as ItemProjectProps;
 ---
 
@@ -44,27 +44,8 @@ const {
     {projectName}
   </h3>
 
-  <h3 class="font-bold mt-4">{labelImages}:</h3>
-  <Carousel client:load images={images} />
-
-  {
-    !!videoDemoURL ? (
-      <div>
-        <h3 class="font-bold my-4">{labelVideoDemoURL}:</h3>
-        <iframe
-          class="w-full"
-          height="400"
-          src={videoDemoURL}
-          title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        />
-      </div>
-    ) : (
-      ""
-    )
-  }
+  <!-- <h3 class="font-bold mt-4">{labelImages}:</h3>
+  <Carousel client:load images={images} /> -->
 
   <h3 class="font-bold mt-4">{labelStackTechnologies}:</h3>
   <div class="flex gap-2 flex-wrap mt-2">
@@ -122,4 +103,23 @@ const {
     client:load
     lists={[{ label: labelFeaturesProject, items: features }]}
   />
+
+  {
+    !!videoDemoURL ? (
+      <div>
+        <h3 class="font-bold my-4">{labelVideoDemoURL}:</h3>
+        <iframe
+          class="w-full"
+          height="400"
+          src={videoDemoURL}
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        />
+      </div>
+    ) : (
+      ''
+    )
+  }
 </li>
