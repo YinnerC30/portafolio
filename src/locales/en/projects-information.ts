@@ -92,5 +92,6 @@ export const projectsEN: ProjectInformation[] = [
         show: false,
       },
     ],
+    videoDemoURL: "https://www.youtube.com/embed/UXXsp_PqsHo?si=GNIZBMMfTT4QFWjb"
   },
 ];
