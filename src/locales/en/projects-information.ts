@@ -29,69 +29,7 @@ export const projectsEN: ProjectInformation[] = [
       "Application command search bar",
       "Application theme change (dark and light mode)",
     ],
-    images: [
-      {
-        url: "/images-cropco/cropco-1.webp",
-        show: false,
-      },
-      {
-        url: "/images-cropco/cropco-1.1.webp",
-        show: false,
-      },
-      {
-        url: "/images-cropco/cropco-2.webp",
-        show: false,
-      },
-      {
-        url: "/images-cropco/cropco-2.1.webp",
-        show: false,
-      },
-      {
-        url: "/images-cropco/cropco-3.webp",
-        show: false,
-      },
-
-      {
-        url: "/images-cropco/cropco-4.webp",
-        show: false,
-      },
-      {
-        url: "/images-cropco/cropco-4.1.webp",
-        show: false,
-      },
-      {
-        url: "/images-cropco/cropco-5.webp",
-        show: false,
-      },
-      {
-        url: "/images-cropco/cropco-5.1.webp",
-        show: false,
-      },
-      {
-        url: "/images-cropco/cropco-6.webp",
-        show: false,
-      },
-      {
-        url: "/images-cropco/cropco-6.1.webp",
-        show: false,
-      },
-      {
-        url: "/images-cropco/cropco-7.webp",
-        show: false,
-      },
-      {
-        url: "/images-cropco/cropco-7.1.webp",
-        show: false,
-      },
-      {
-        url: "/images-cropco/cropco-8.webp",
-        show: false,
-      },
-      {
-        url: "/images-cropco/cropco-8.1.webp",
-        show: false,
-      },
-    ],
+    images: [],
     videoDemoURL: "https://www.youtube.com/embed/UXXsp_PqsHo?si=GNIZBMMfTT4QFWjb"
   },
 ];
